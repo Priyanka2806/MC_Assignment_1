@@ -10,7 +10,9 @@
     android:gravity="center"
     android:orientation="vertical"
     tools:context="in.ac.iiitd.psingh.mc16.objectivequiz.QuizActivity"
-    android:weightSum="1">
+    android:weightSum="1"
+    android:background="@color/colorBackground"
+    style="?android:attr/buttonBarStyle">
     <TextView
         android:id="@+id/textViewer"
         android:layout_width="wrap_content"
@@ -18,7 +20,7 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="@string/question"
         android:textColor="@color/colorGrey"
-        android:layout_gravity="center_horizontal" />
+        android:layout_gravity = "center_horizontal|top" />
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -29,17 +31,21 @@
             android:layout_height="wrap_content"
             android:text="@string/trueText"
             android:drawableStart="@drawable/arrow_left"
+
             />
         <Button
             android:id="@+id/FalseButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/falseText"
-            android:drawableEnd="@drawable/arrow_right"/>
+            android:drawableEnd="@drawable/arrow_right"
+            />
     </LinearLayout>
     <Button
         android:id="@+id/next_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/nextText"/>
+        android:text="@string/nextText"
+        android:drawableEnd="@drawable/arrow_next"
+        style="?android:attr/buttonBarButtonStyle"/>
 </LinearLayout>
